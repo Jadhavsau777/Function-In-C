@@ -1,0 +1,39 @@
+#include<stdio.h>
+#include<conio.h>
+
+int addition(int x, int y)
+{
+int sum;
+sum=x+y;
+printf("The Addition Is %d",sum);
+}
+
+int multi(int x, int y)
+{
+int sum;
+sum=x*y;
+printf("The Multiplication is %d",sum);
+}
+
+int div(int x, int y)
+{
+int sum;
+sum=x/y;
+printf("The Division Is %d",sum);
+}
+
+void main()
+{
+
+     int a,b;
+     clrscr();
+     printf("Enter Any two Numbers");
+     scanf("%d%d",&a,&b);
+
+  addition(a,b);
+  multi(a,b);
+  div(a,b);
+
+    getch();
+
+}
