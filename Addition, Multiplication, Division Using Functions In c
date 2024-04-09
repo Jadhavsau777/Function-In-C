@@ -1,39 +1,49 @@
-#include<stdio.h>
-#include<conio.h>
+#include <stdio.h>
 
 int addition(int x, int y)
 {
-int sum;
-sum=x+y;
-printf("The Addition Is %d",sum);
+    int sum;
+    sum = x + y;
+    printf("\nThe Addition Is %d", sum);
 }
 
 int multi(int x, int y)
 {
-int sum;
-sum=x*y;
-printf("The Multiplication is %d",sum);
+    int sum;
+    sum = x * y;
+    printf("\nThe Multiplication is %d", sum);
 }
 
-int div(int x, int y)
+float division(int x, int y)
 {
-int sum;
-sum=x/y;
-printf("The Division Is %d",sum);
+    float sum;
+    sum = (float)x / y;
+    printf("\nThe Division Is %f\n", sum);
 }
 
-void main()
+int main()
 {
+    char ch;
+    do
+    {
+        int a, b;
+        printf("Enter Any two Numbers\n");
+        scanf("%d %d", &a, &b);
 
-     int a,b;
-     clrscr();
-     printf("Enter Any two Numbers");
-     scanf("%d%d",&a,&b);
+        addition(a, b);
+        multi(a, b);
+        division(a, b);
 
-  addition(a,b);
-  multi(a,b);
-  div(a,b);
+        printf("Do You Want to Do Another Number Y/N?\n");
+        fflush(stdin);
+        scanf(" %c", &ch);
 
-    getch();
+    } while (ch == 'Y' || ch == 'y');
+    
+    if(ch=='n' ||ch=='N');
+    {
+    printf("ThankYou!");
+    }
 
+    return 0;
 }
