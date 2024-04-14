@@ -4,21 +4,21 @@ int addition(int x, int y)
 {
     int sum;
     sum = x + y;
-    printf("\nThe Addition Is %d", sum);
+    return sum;
 }
 
 int multi(int x, int y)
 {
     int sum;
     sum = x * y;
-    printf("\nThe Multiplication is %d", sum);
+    return sum;
 }
 
 float division(int x, int y)
 {
     float sum;
     sum = (float)x / y;
-    printf("\nThe Division Is %f\n", sum);
+    return sum;
 }
 
 int main()
@@ -26,13 +26,17 @@ int main()
     char ch;
     do
     {
-        int a, b;
+        int a, b,c,d,e;
         printf("Enter Any two Numbers\n");
         scanf("%d %d", &a, &b);
 
-        addition(a, b);
-        multi(a, b);
-        division(a, b);
+        c=addition(a, b);
+        d=multi(a, b);
+        e=division(a, b);
+
+        printf("The Addition Is:",c);
+        printf("The Multiplication Is:",d)l
+        printf("The Division Is:",e);
 
         printf("Do You Want to Do Another Number Y/N?\n");
         fflush(stdin);
